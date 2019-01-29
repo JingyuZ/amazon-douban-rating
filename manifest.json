@@ -1,0 +1,27 @@
+{
+  "name": "Douban Book Rating",
+  "version": "0.0.1",
+  "description": "Display the book rating from Douban on Amazon",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.amazon.com/*"
+      ],
+      "js": [
+        "content_script.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "*://*.amazon.com/*"
+  ],
+  "icons": {
+    "128": "icons/book_128.png",
+    "48": "icons/book_32.png"
+  },
+  "manifest_version": 2
+}
